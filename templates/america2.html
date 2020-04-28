@@ -1,0 +1,99 @@
+ <!--header-->
+ <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/main.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+
+    <title>Civilization</title>
+</head>
+
+<body>
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="/a">الحضارات</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+ 
+  </nav>
+  <h4> لنتعلم عن كل الحضارات حول العالم</h4>
+<!--Animation earth-->
+<div class="earth"></div>
+
+
+
+<h4>أهلا بك في اميركا</h4>
+  <div class="container">
+  <div class="row">
+  <form action="/a/america" method="POST">
+    <label class="label2">أختر دوله</label>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text btn-primary" for="inputGroupSelect01">الدول</label>
+      </div>
+    <select class="custom-select" name="country" id="country">
+      <option selected></option>
+      <option value="المكسيك">المكسيك</option>
+      <option value="بيرو">بيرو</option>
+    </select>
+    </div>
+  </div>
+  <div class="row">
+    <label class="label2">أختر العهد</label>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text btn-primary" for="inputGroupSelect01">العهود</label>
+      </div>
+    <select class="custom-select" name="era" id="testament">
+      <option selected></option>
+      <option value="الحديث">الحديث</option>
+      <option value="القديم">القديم</option>
+    </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 col-lg-4">
+      <button  type="submit" name="submit" id="submit" class="btn btn2 btn-outline-primary">أذهب</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+ <!--footer-->
+ <footer class="footer-section"> 
+  <div class="copyright-area">
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+          <div class="footer-menu">
+            <ul>
+              <li><a href="/login">اللغات</a></li>
+              <li><a href="/a/about">من نحن</a></li>
+            </ul>
+          </div>
+          </div>
+    </div>
+    <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p> &copy; copy right <a href="#">GSC</a></p>
+            </div>
+          </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

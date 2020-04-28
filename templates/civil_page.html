@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/main.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+
+    <title>map</title>
+</head>
+
+<body>
+
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/e">Civilization</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+  </nav>
+
+  <!-- The slideshow images -->
+  <div class="container mt-3">
+    <div id="myCarousel" class="carousel slide">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li class="item1 active"></li>
+        <li class="item2"></li>
+        <li class="item3"></li>
+      </ul>
+      
+      <div class="container mt-3">
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/images/banner.jpg" alt="Los Angeles" width="1100" height="auto">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/bg1.jpg" alt="Chicago" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/bg2.png" alt="New York" width="1100" height="500">
+            </div>
+        </div>
+          
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#myCarousel">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+    
+    <script>
+      $(document).ready(function(){
+        // Activate Carousel
+        $("#myCarousel").carousel();
+          
+        // Enable Carousel Indicators
+        $(".item1").click(function(){
+          $("#myCarousel").carousel(0);
+        });
+        $(".item2").click(function(){
+          $("#myCarousel").carousel(1);
+        });
+        $(".item3").click(function(){
+          $("#myCarousel").carousel(2);
+        });
+          
+        // Enable Carousel Controls
+        $(".carousel-control-prev").click(function(){
+          $("#myCarousel").carousel("prev");
+        });
+        $(".carousel-control-next").click(function(){
+          $("#myCarousel").carousel("next");
+        });
+      });
+    </script>
+
+    <div>
+
+
+      <article>
+        <center><h4>{{information[4]}}</h4></center>
+    
+        <p>Those remnants in {{information[7]}} meridian and {{information[8]}} latitude </p>
+        <br>
+        <form action="/e/map" method="POST">
+          <button   type="submit" name="submit" value="{{information[8]}} || {{information[7]}}"  class="btn btn2 btn-outline-primary">Show on Google maps</button>
+        </form>
+        <br>
+        <p>It is in {{ information[5] }} </p>
+        <p> {{information[6]}} </p>
+      </article>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer-section"> 
+  <div class="copyright-area">
+    
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+          <div class="footer-menu">
+            <ul>
+              <li><a href="/login">Languages</a></li>
+              <li><a href="/e/about">about us</a></li>
+            </ul>
+          </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+          <div class="copyright-text">
+            <p> &copy; copy right <a href="#">GSC</a></p>
+          </div>
+          </div>
+          
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
